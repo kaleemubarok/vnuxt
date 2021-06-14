@@ -31,10 +31,17 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
-  /*
-   ** Build configuration
-   */
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode'
+  ],
+  purgeCSS: {
+    whitelist: ['dark-mode'],
+  },
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
+  ],
   build: {
     /*
      ** You can extend webpack config here

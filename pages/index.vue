@@ -1,56 +1,43 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        vuxs
-      </h1>
-      <h2 class="subtitle">
-        another test of Nuxt.js project
-      </h2>
+  <div
+    class="bg-gray-100 dark:bg-black transition-all duration-300 min-h-screen"
+  >
+    <navbar />
+    <div class="container mx-auto pt-24 p-4" v-if="source">
+      <stats :stats="source" />
+      <!-- <cases :states="source.statewise" /> -->
+      <p class="text-center">
+        <a
+          class=" text-center text-gray-500 dark:text-white my-8"
+          href="https://apicovid19indonesia-v2.vercel.app/"
+          >Sumber Data</a
+        >
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import navbar from "~/components/navbar";
+import stats from "~/components/stats";
+// import cases from "~/components/cases";
+import axios from "axios";
 export default {
+  data() {
+    return {
+      source: null
+    };
+  },
   components: {
-    Logo
+    stats,
+    // cases,
+    navbar
+  },
+  async mounted() {
+    const { data } = await axios.get(
+      `https://apicovid19indonesia-v2.vercel.app/api/indonesia`
+    );
+    this.source = data;
   }
-}
+};
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
