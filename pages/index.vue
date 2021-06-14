@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-100 dark:bg-black transition-all duration-300 min-h-screen"
+    class="bg-gray-100 dark:bg-indigo-900 transition-all duration-300 min-h-screen"
   >
     <navbar />
     <div class="container mx-auto pt-24 p-4" v-if="source">
