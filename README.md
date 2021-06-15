@@ -1,21 +1,23 @@
-# Nuxt.js Example
+# Simple API consumption using Nuxt.js
 
-This directory is a brief example of a [Nuxt.js](https://nuxtjs.org) app that can be deployed with Vercel and zero configuration.
+This is a [Nuxt.js](https://nuxtjs.org) app that consume Covid19 API from [Reynadi531](https://apicovid19indonesia-v2.vercel.app/api/indonesia). Code modified from [fayazara](https://dev.to/fayazara/quick-way-to-implement-darkmode-in-nuxt-js-tailwindcss-corona-virus-tracker-279a), deployed with Vercel and zero configuration.
 
-## Deploy Your Own
+## Try Your Own
 
-Deploy your own Nuxt.js project with Vercel.
+Deploy your own Nuxt.js project with Vercel or Heroku.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/main/examples/nuxtjs)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/kaleemubarok/vnuxt)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Reynadi531/api-covid19-indonesia-v2)
 
-_Live Example: https://nuxtjs.now-examples.now.sh_
+_Live Apps: https://covid19.oil.my.id_
 
-### How We Created This Example
+> This app is still far from perfect and is in development mode. Kindly do a `PR` on any suggestions..
 
-To get started with Nuxt.js deployed with Vercel, you can use the [Create-Nuxt-App CLI](https://www.npmjs.com/package/create-nuxt-app) to initialize the project:
+### How To Run This
 
 ```shell
-$ npx create-nuxt-app my-app
+$ npm install --global yarn
 ```
-
-> The only change made is to amend the output directory in `nuxt.config.js` to `"/public"`.
+```shell
+$ yarn dev
+```
