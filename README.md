@@ -7,7 +7,7 @@ This is a [Nuxt.js](https://nuxtjs.org) app that consume Covid19 API from [Reyna
 Deploy your own Nuxt.js project with Vercel or Heroku.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/kaleemubarok/vnuxt)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Reynadi531/api-covid19-indonesia-v2)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/kaleemubarok/vnuxt)
 
 _Live Apps: https://covid19.oil.my.id_
 
