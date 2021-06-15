@@ -14,7 +14,7 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/' }],
   },
   /*
    ** Customize the progress-bar color
@@ -31,10 +31,17 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
-  /*
-   ** Build configuration
-   */
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode'
+  ],
+  purgeCSS: {
+    whitelist: ['dark-mode'],
+  },
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa'
+  ],
   build: {
     /*
      ** You can extend webpack config here
